@@ -89,4 +89,25 @@ function include_template($name, array $data = []) {
     return $result;
 }
 
+function formating($value)
+{
+    $value = ceil($value);
 
+    return (string)number_format($value,0,'',' ')." ₽";
+}
+
+function get_dt_range($dt)
+{
+    $date =  new DateTime($dt);
+    $now = new DateTime("now");
+    if ($date>$now == 1)
+    {
+        $range = $date->diff($now);
+        $hours = $range->h;
+        $hours = $hours + ($range->days*24);
+        echo '">'.$hours.":".$range->i;
+    }
+    else{
+        echo 'timer--finishing"> 00:00';
+    }
+}

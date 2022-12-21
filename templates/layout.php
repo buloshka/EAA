@@ -77,9 +77,9 @@ $product = array(
                     {
                         echo '
                         <div class = "user-menu__logged">
-                        <p>',$user_name,'</p>
-                        <a class="user-menu__bets" href="pages/my-bets.html">Мои ставки</a>
-                        <a class="user-menu__logout" href="#">Выход</a>
+                            <p>',$user_name,'</p>
+                            <a class="user-menu__bets" href="pages/my-bets.html">Мои ставки</a>
+                            <a class="user-menu__logout" href="#">Выход</a>
                         </div>';
 
                     }
@@ -114,7 +114,7 @@ $product = array(
                 foreach($category as &$value){
                     echo
                     '<li class="nav__item">
-                            <a href="pages/all-lots.html">',$value,'</a>
+                            <a href="pages/all-lots.html">',$value['name'],'</a>
                         </li>';
 
                 }?>
